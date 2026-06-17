@@ -17,6 +17,17 @@ The system will:
 
 ---
 
+## 👥 Team Anant
+
+| Team Member | Responsibility |
+|-------------|---------------|
+| **Adarsh** | ML Nowcasting & Forecasting |
+| **Deepanshi** | Solar Flare Analysis & Feature Engineering |
+| **Disha** | Data Engineering & Preprocessing |
+| **Hindavi** | Dashboard & Visualization |
+
+---
+
 # 🎯 Objectives
 
 ## Phase 1: Nowcasting
