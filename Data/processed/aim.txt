@@ -1,0 +1,24 @@
+Maan lo future me:
+
+Input:
+
+SOLEXS_day1.lc
+HEL1OS_day1.lc
+
+Tumne clean karke merge kiya aur banaya:
+
+merged_day1.csv
+
+To usko rakhoge:
+
+data/
+├── sample_data/
+└── processed/
+    └── merged_day1.csv
+
+Ya ML training ke liye:
+
+processed/
+├── train.csv
+├── features.csv
+└── merged_data.csv
