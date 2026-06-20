@@ -1,4 +1,4 @@
-from file_reader import (read_solexs,read_hel1os_cdte1)
+#from file_reader import (read_solexs,read_hel1os_cdte1)
 import numpy as np
 
 def detect_solexs_flare(solexs_data):

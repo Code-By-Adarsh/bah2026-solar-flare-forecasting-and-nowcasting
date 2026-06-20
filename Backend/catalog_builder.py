@@ -1,5 +1,5 @@
-from file_reader import (read_solexs,read_hel1os_cdte1)
-from flare_detector import (detect_solexs_flare,detect_hel1os_flare)
+#from file_reader import (read_solexs,read_hel1os_cdte1)
+#from flare_detector import (detect_solexs_flare,detect_hel1os_flare)
 import pandas as pd
 
 def build_master_catalog(solexs_result,hel1os_result):
@@ -28,15 +28,15 @@ def build_master_catalog(solexs_result,hel1os_result):
     ]
 
     df = pd.DataFrame(catalog)
-    df.to_csv("master_flare_catalog.csv",index=False)
+    df.to_csv("Outputs/master_flare_catalog.csv",index=False)
     return df
 
+"""
 solexs_data = read_solexs("AL1_SOLEXS_20260615_SDD2_L1.lc")
 hel1os_data = read_hel1os_cdte1("lightcurve_cdte1.fits","lightcurve_cdte1_2.fits")
 solexs_result = detect_solexs_flare(solexs_data)
 hel1os_result = detect_hel1os_flare(hel1os_data)
 catalog = build_master_catalog(solexs_result,hel1os_result)
 print(catalog)
-
-
+"""
 
