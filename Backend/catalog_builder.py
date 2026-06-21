@@ -1,6 +1,7 @@
 #from file_reader import (read_solexs,read_hel1os_cdte1)
 #from flare_detector import (detect_solexs_flare,detect_hel1os_flare)
 import pandas as pd
+from datetime import datetime
 
 def build_master_catalog(solexs_result,hel1os_result):
 
@@ -8,7 +9,7 @@ def build_master_catalog(solexs_result,hel1os_result):
         {
             "Event_ID":"S001",
             "Source":"SoLEXS",
-            "Peak_Time":solexs_result["peak_time"],
+            "Peak_Time":datetime.utcfromtimestamp(solexs_result["peak_time"]),
             "Peak_Value":solexs_result["peak_value"],
             "Threshold":solexs_result["threshold"],
             "Flare_Points":solexs_result["flares"]
@@ -18,7 +19,7 @@ def build_master_catalog(solexs_result,hel1os_result):
         {
             "Event_ID": "H001",
             "Source": "HEL1OS",
-            "Peak_Time":hel1os_result["peak_time"],
+            "Peak_Time":datetime.utcfromtimestamp(hel1os_result["peak_time"]),
             "Peak_Value":hel1os_result["peak_value"],
             "Threshold":hel1os_result["threshold"],
             "Flare_Points":hel1os_result["flares"]

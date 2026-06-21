@@ -124,10 +124,23 @@ with st.sidebar:
 
     st.divider()
 
+    use_sample_data = st.checkbox(
+        "🧪 Use Built-in Sample Dataset (15 June 2026)"
+    )
+
+    st.caption(
+        "Having trouble uploading files? "
+        "Use the built-in sample dataset."
+    )
+
     files_ready = (
+        use_sample_data
+        or
+        (
         solexs_file and
         hel1os_file_1 and
         hel1os_file_2
+        )
     )
 
     run_analysis = st.button(
@@ -147,58 +160,72 @@ if run_analysis:
         # -----------------------
         # READ DATA
         # -----------------------
-        if not solexs_file:
-            st.error("Upload SoLEXS file")
-            st.stop()
+        if not use_sample_data:
+            if not solexs_file:
+                st.error("Upload SoLEXS file")
+                st.stop()
 
-        if not hel1os_file_1:
-            st.error("Upload HEL1OS CDTE1 Part-1")
-            st.stop()
+            if not hel1os_file_1:
+                st.error("Upload HEL1OS CDTE1 Part-1")
+                st.stop()
 
-        if not hel1os_file_2:
-            st.error("Upload HEL1OS CDTE1 Part-2")
-            st.stop()
+            if not hel1os_file_2:
+                st.error("Upload HEL1OS CDTE1 Part-2")
+                st.stop()
 
-        with tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=".lc"
-        ) as tmp_solexs:
 
-            tmp_solexs.write(
-                solexs_file.getbuffer()
+        if use_sample_data:
+            solexs_data = read_solexs(
+                "Data/sample_data/SOLEXS/AL1_SOLEXS_20260615_SDD2_L1.lc"
             )
 
-            solexs_path = tmp_solexs.name
-
-        with tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=".fits"
-        ) as tmp_hel1os_1:
-
-            tmp_hel1os_1.write(
-                hel1os_file_1.getbuffer()
+            hel1os_data = read_hel1os_cdte1(
+                "Data/sample_data/HEL1OS/lightcurve_cdte1.fits",
+                "Data/sample_data/HEL1OS/lightcurve_cdte1_2.fits"
             )
 
-            hel1os_path_1 = tmp_hel1os_1.name
+        else:
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                suffix=".lc"
+            ) as tmp_solexs:
 
-        with tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=".fits"
-        ) as tmp_hel1os_2:
+                tmp_solexs.write(
+                    solexs_file.getbuffer()
+                )
 
-            tmp_hel1os_2.write(
-                hel1os_file_2.getbuffer()
+                solexs_path = tmp_solexs.name
+
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                suffix=".fits"
+            ) as tmp_hel1os_1:
+
+                tmp_hel1os_1.write(
+                    hel1os_file_1.getbuffer()
+                )
+
+                hel1os_path_1 = tmp_hel1os_1.name
+
+            with tempfile.NamedTemporaryFile(
+                delete=False,
+                suffix=".fits"
+            ) as tmp_hel1os_2:
+
+                tmp_hel1os_2.write(
+                    hel1os_file_2.getbuffer()
+                )
+
+                hel1os_path_2 = tmp_hel1os_2.name
+
+            solexs_data = read_solexs(
+                solexs_path
             )
 
-            hel1os_path_2 = tmp_hel1os_2.name
-
-        solexs_data = read_solexs(
-            solexs_path
-        )
-
-        hel1os_data = read_hel1os_cdte1(
-            hel1os_path_1, hel1os_path_2
-        )
+            hel1os_data = read_hel1os_cdte1(
+                hel1os_path_1,
+                hel1os_path_2
+            )
 
         # -----------------------
         # DETECT FLARES
@@ -510,7 +537,7 @@ else:
 
     Then click 🚀 Analyze Data to begin solar flare nowcasting.
     """
-)
+        )
 
     st.divider()
 
