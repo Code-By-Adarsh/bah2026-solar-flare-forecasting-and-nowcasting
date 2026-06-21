@@ -391,7 +391,8 @@ if run_analysis:
 
         fig1.update_layout(
             template="ggplot2",
-            height=500
+            height=500,
+            showlegend=False
         )
 
         fig1.add_trace(
@@ -446,7 +447,8 @@ if run_analysis:
 
         fig2.update_layout(
             template="ggplot2",
-            height=500
+            height=500,
+            showlegend=False
         )
 
         fig2.add_trace(
