@@ -505,8 +505,8 @@ else:
 
     Upload:
     • SoLEXS (.lc)
-    • HEL1OS Part-1 (.fits)
-    • HEL1OS Part-2 (.fits)
+    • HEL1OS CDTE1 Part-1 (.fits)
+    • HEL1OS CDTE1 Part-2 (.fits)
 
     Then click 🚀 Analyze Data to begin solar flare nowcasting.
     """
