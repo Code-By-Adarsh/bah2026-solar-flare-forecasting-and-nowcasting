@@ -29,7 +29,7 @@ def build_master_catalog(solexs_result,hel1os_result):
     ]
 
     df = pd.DataFrame(catalog)
-    df.to_csv("Outputs/master_flare_catalog.csv",index=False)
+    df.to_csv("Outputs/master_flare_catalogue.csv",index=False)
     return df
 
 """

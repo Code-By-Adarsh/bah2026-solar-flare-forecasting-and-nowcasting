@@ -90,7 +90,7 @@ with st.sidebar:
 
         ✅ HEL1OS Analysis
 
-        ✅ Unified Master Catalog
+        ✅ Unified Master Catalogue
 
         🚧 Forecasting (Upcoming)
         """
@@ -480,7 +480,7 @@ if run_analysis:
         # CATALOG
         # ==================================================
 
-        st.subheader("📋 Unified Master Flare Catalog")
+        st.subheader("📋 Unified Master Flare Catalogue")
 
         current_time = datetime.now().strftime("%Y-%M-%D_%H-%M-%S")
 
@@ -489,9 +489,9 @@ if run_analysis:
         )
 
         st.download_button(
-            label="📥 Download Catalog",
+            label="📥 Download Catalogue",
             data=csv,
-            file_name=f"SolarFlareCatalog_{current_time}.csv",
+            file_name=f"SolarFlareCatalogue_{current_time}.csv",
             mime="text/csv"
         )
 
@@ -519,7 +519,7 @@ if run_analysis:
 
 • HEL1OS Threshold : {hel1os_result['threshold']}
 
-• Unified Master Catalog Generated Successfully
+• Unified Master Catalogue Generated Successfully
 
 Status: READY FOR NOWCASTING
 """
