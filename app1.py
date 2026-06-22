@@ -148,6 +148,9 @@ with st.sidebar:
         use_container_width=True,
         disabled=not files_ready
     )
+
+    if run_analysis:
+        st.success("✅ Analysis Completed Successfully")
     
 # --------------------------------------------------
 # ANALYSIS
@@ -249,7 +252,7 @@ if run_analysis:
         )
 
         st.success(
-            "Analysis Completed Successfully"
+            "✅ Analysis Completed Successfully"
         )
 
         # ==================================================
