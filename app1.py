@@ -552,7 +552,6 @@ st.markdown("""
 - Adarsh Jayprakash Mishra
 - Deepanshi Rathee
 - Hindavi Rajendra Kudu
-- Disha Vartak
 
 **Bharatiya Antariksh Hackathon 2026**
 """)
