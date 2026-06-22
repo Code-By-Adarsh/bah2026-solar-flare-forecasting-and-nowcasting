@@ -21,9 +21,8 @@ The system will:
 
 | Team Member | Responsibility |
 |-------------|---------------|
-| **Adarsh** | ML Nowcasting & Forecasting |
+| **Adarsh** | Data Analysis, Processing, ML Nowcasting & Forecasting |
 | **Deepanshi** | Solar Flare Analysis & Feature Engineering |
-| **Disha** | Data Engineering & Preprocessing |
 | **Hindavi** | Dashboard & Visualization |
 
 ---
@@ -201,123 +200,38 @@ dashboard_app.py
 solar-flare-project/
 
 │
-├── data/
+├── .devcontainer/
 │
-├── notebooks/
+├── .streamlit/
 │
-├── src/
-│   ├── preprocessing/
-│   ├── nowcasting/
-│   ├── forecasting/
+├── Asset/
 │
-├── dashboard/
+├── Backend/
+│   ├── catalog_builder.py/
+│   ├── file_reader.py/
+│   ├── flare_detector.py/
 │
-├── docs/
+├── Data/
+│   ├── processed/
+│   ├── sample_data/
+│        ├── HEL1OS/
+│             ├── 15_june_cdte1_data_part1/
+│             ├── 15_june_cdte1_data_part2/
+│        ├── SoLEXS/
+│             ├── 15_june_data/
 │
-├── models/
+├── Documents/
 │
-├── presentation/
+├── License
+│
+├── PROJECT_GUIDE.md
 │
 ├── README.md
 │
+├── app1.py
+|
 └── requirements.txt
 ```
-
----
-
-# 📅 12-Day Execution Plan
-
-## Days 1–3 → Data Understanding
-
-### Goal
-
-Understand and visualize the data.
-
-### Tasks
-
-- Dataset access
-- Read files
-- Generate first graphs
-- Understand flare patterns
-
-### Deliverables
-
-- Data loaded successfully
-- First X-ray plots generated
-
----
-
-## Days 4–6 → Nowcasting
-
-### Goal
-
-Build a working flare detection system.
-
-### Tasks
-
-- Flare event identification
-- Feature engineering
-- Build flare detection logic
-- Create alert dashboard
-
-### Deliverables
-
-- Working flare detection dashboard
-- Alert system
-
----
-
-## Days 7–9 → Forecasting
-
-### Goal
-
-Predict future flare events.
-
-### Tasks
-
-- Create labels
-- Train ML models
-- Evaluate results
-
-### Deliverables
-
-- Solar flare prediction model
-
----
-
-## Days 10–11 → Integration
-
-### Goal
-
-Connect everything together.
-
-### Tasks
-
-- Connect model with dashboard
-- Testing
-- Validation
-
-### Deliverables
-
-- End-to-end system
-
----
-
-## Day 12 → Presentation & Submission
-
-### Goal
-
-Prepare final submission.
-
-### Tasks
-
-- PPT
-- Demo
-- Mock judging
-
-### Deliverables
-
-- Final Project Submission
 
 ---
 
@@ -343,40 +257,6 @@ Prepare final submission.
 ## Dashboard
 
 - Streamlit Documentation
-
----
-
-# 🏆 Success Criteria
-
-### By Day 3
-
-✅ Dataset Loaded
-
-✅ First Graph Generated
-
----
-
-### By Day 6
-
-✅ Solar Flare Detection Working
-
-✅ Dashboard Alerts Working
-
----
-
-### By Day 9
-
-✅ Solar Flare Prediction Model Working
-
----
-
-### By Day 12
-
-✅ Complete Dashboard
-
-✅ Detection + Forecasting
-
-✅ Final Presentation Ready
 
 ---
 
