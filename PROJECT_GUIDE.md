@@ -349,9 +349,8 @@ Alerts & Visualization
 
 | Member | Role |
 |----------|----------|
-| Adarsh | ML Nowcasting & Forecasting |
+| Adarsh | Data Analysis, Processing, ML Nowcasting & Forecasting |
 | Deepanshi | Solar Flare Analysis & Feature Engineering |
-| Disha | Data Engineering & Preprocessing |
 | Hindavi | Dashboard & Visualization |
 
 ---
@@ -385,67 +384,6 @@ Alerts & Visualization
 
 - Git
 - GitHub
-
----
-
-# 📅 Development Roadmap
-
-## Days 1-3
-
-Data Understanding
-
-Tasks:
-
-- Dataset access
-- Data exploration
-- Initial visualization
-
----
-
-## Days 4-6
-
-Nowcasting
-
-Tasks:
-
-- Flare identification
-- Detection logic
-- Dashboard integration
-
----
-
-## Days 7-9
-
-Forecasting
-
-Tasks:
-
-- Feature engineering
-- Model training
-- Prediction generation
-
----
-
-## Days 10-11
-
-Integration
-
-Tasks:
-
-- Connect modules
-- Testing
-
----
-
-## Day 12
-
-Submission
-
-Tasks:
-
-- PPT
-- Demo
-- Documentation
 
 ---
 
